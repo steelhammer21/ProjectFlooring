@@ -30,7 +30,9 @@ namespace ProjectFlooring
                 Console.WriteLine($"You need {tilesNeeded} tiles to cover the floor");
                 Console.WriteLine($"The total cost of tiles is ${totalCost}");
             }
+
             else
+
             {
                 Console.Write("Enter the base of the floor in foot: ");
                 double width = Convert.ToDouble(Console.ReadLine());
