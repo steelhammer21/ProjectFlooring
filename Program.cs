@@ -31,19 +31,23 @@ namespace ProjectFlooring
                 double floorArea = 0.5 * width * height;
                 Console.WriteLine(floorArea);
             }
+            else
+            {
+                Console.WriteLine("Invalid room shape entered!")
+            }
 
-                Console.Write("Enter the area of a single tile in square foot: ");
-                double tileArea = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter the area of a single tile in square foot: ");
+            double tileArea = Convert.ToDouble(Console.ReadLine());
 
-                Console.Write("Enter the cost per tile in dollars: ");
-                double tileCost = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter the cost per tile in dollars: ");
+            double tileCost = Convert.ToDouble(Console.ReadLine());
 
-                
-                double tilesNeeded = floorArea / tileArea;
-                double totalCost = tilesNeeded * tileCost;
 
-                Console.WriteLine($"You need {tilesNeeded} tiles to cover the floor");
-                Console.WriteLine($"The total cost of tiles is ${totalCost}");
+            double tilesNeeded = floorArea / tileArea;
+            double totalCost = tilesNeeded * tileCost;
+
+            Console.WriteLine($"You need {tilesNeeded} tiles to cover the floor");
+            Console.WriteLine($"The total cost of tiles is ${totalCost}");
 
 
         }
