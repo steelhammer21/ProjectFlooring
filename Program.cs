@@ -6,34 +6,30 @@ namespace ProjectFlooring
     {
         static void Main(string[] args)
         {
+            
             Console.Write("Is the room rectangle or triangle (R/T) :");
             string roomShape = Console.ReadLine();
 
+            Console.Write("Enter the width of the floor in foot: ");
+            double width = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter the length of the floor in foot: ");
+            double length = Convert.ToDouble(Console.ReadLine());
+            double floorArea = 0;
+
             if (roomShape == "R")
             {
-                Console.Write("Enter the width of the floor in foot: ");
-                double width = Convert.ToDouble(Console.ReadLine());
-
-                Console.Write("Enter the length of the floor in foot: ");
-                double length = Convert.ToDouble(Console.ReadLine());
-
-                double floorArea = width * length;
-                Console.WriteLine(floorArea);
+                floorArea = width * length;
+                Console.WriteLine($"The room size is {floorArea} square feet");
             }
             else if (roomShape == "T")
             {
-                Console.Write("Enter the base of the floor in foot: ");
-                double width = Convert.ToDouble(Console.ReadLine());
-
-                Console.Write("Enter the height of the floor in foot: ");
-                double height = Convert.ToDouble(Console.ReadLine());
-
-                double floorArea = 0.5 * width * height;
-                Console.WriteLine(floorArea);
+                floorArea = 0.5 * width * length;
+                Console.WriteLine($"The room size is {floorArea} square feet");
             }
             else
             {
-                Console.WriteLine("Invalid room shape entered!")
+                Console.WriteLine("Invalid room shape entered!");
             }
 
             Console.Write("Enter the area of a single tile in square foot: ");
@@ -41,7 +37,6 @@ namespace ProjectFlooring
 
             Console.Write("Enter the cost per tile in dollars: ");
             double tileCost = Convert.ToDouble(Console.ReadLine());
-
 
             double tilesNeeded = floorArea / tileArea;
             double totalCost = tilesNeeded * tileCost;
