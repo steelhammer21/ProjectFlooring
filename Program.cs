@@ -49,6 +49,11 @@ namespace ProjectFlooring
             double tilesNeeded = floorArea / tileArea;
             double totalCost = tilesNeeded * tileCost;
 
+            //Calculating labor cost
+            const double LABOR = 4.3;
+            double laborCost = LABOR * floorArea;
+
+            Console.WriteLine($"The total cost labor cost for this project is ${laborCost}");
             Console.WriteLine($"The room size is {floorArea} square feet");
             Console.WriteLine($"You need {tilesNeeded} tiles to cover the floor");
             Console.WriteLine($"The total cost of tiles is ${totalCost}");
