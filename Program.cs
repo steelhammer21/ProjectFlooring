@@ -4,6 +4,7 @@ namespace ProjectFlooring
 {
     internal class Program
     {
+        const double LABOR_COST_PER_SQUARE_FOOT = 4.3; //Calculating labor cost
         static void Main(string[] args)
         {
 
@@ -49,9 +50,8 @@ namespace ProjectFlooring
             double tilesNeeded = floorArea / tileArea;
             double totalCost = tilesNeeded * tileCost;
 
-            //Calculating labor cost
-            const double LABOR = 4.3;
-            double laborCost = LABOR * floorArea;
+            
+            double laborCost = LABOR_COST_PER_SQUARE_FOOT * floorArea;
 
             Console.WriteLine($"The total cost labor cost for this project is ${laborCost}");
             Console.WriteLine($"The room size is {floorArea} square feet");
